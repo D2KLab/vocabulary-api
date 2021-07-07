@@ -2,7 +2,8 @@
   "extends": "airbnb-base",
   "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "ecmaVersion": 2017
+    "ecmaVersion": 2017,
+    "requireConfigFile": false
   },
   "env": {
     "es6": true,
@@ -11,7 +12,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".mjs"]
       }
     }
   },

@@ -1,5 +1,6 @@
 import os from 'os';
 import express from 'express';
+import argparse from 'argparse';
 import VocabularyRoutes from './src/vocabulary.routes';
 import VocabularyManager from './src/vocabulary.manager';
 
@@ -9,7 +10,14 @@ const app = express();
 
 const router = express.Router();
 
-const vm = VocabularyManager.fromConfigFile('./config.yml');
+const parser = new argparse.ArgumentParser({
+  description: 'Run the Vocabulary API Server',
+});
+console.log(parser);
+parser.add_argument('config', { default: './config.yml' });
+
+const args = parser.parse_args();
+const vm = VocabularyManager.fromConfigFile(args.config);
 const vr = new VocabularyRoutes(vm);
 
 router.get('/', (req, res) => {

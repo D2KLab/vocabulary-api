@@ -42,7 +42,12 @@ Example:
 
 The API can be configured using `config.yml`.
 
-The server application can be run using NodeJS
+The server application can be run using NodeJS:
 
     npm install
-    npm start
+    npm start config.yml
+
+In alternative, it is possible to install it using Docker:
+
+    docker build -t d2klab/vocabularyapi .
+    docker run -d -p 8873:3333 -v /home/semantic/odeuropa/vocabulary-api:/config --name odeuropa_vocapi d2klab/vocabularyapi
