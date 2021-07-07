@@ -1,0 +1,34 @@
+{
+  "name": "thesaurus-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "module": "src/vocabulary.manager.mjs",
+  "scripts": {
+    "start": "node server"
+  },
+  "esm": {
+    "mainFields": [
+      "module",
+      "main"
+    ],
+    "force": true
+  },
+  "author": "Pasquale Lisena <pasquale.lisena@eurecom.fr>",
+  "license": "ISC",
+  "dependencies": {
+    "accept-language-parser": "^1.5.0",
+    "esm": "^3.2.25",
+    "similarity": "^1.2.1",
+    "sparql-transformer": "^2.7.3",
+    "yaml": "^1.10.2"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "@babel/core": "^7.14.6",
+    "@babel/eslint-parser": "^7.14.7",
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
+  }
+}
